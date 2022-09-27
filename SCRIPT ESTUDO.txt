@@ -1,0 +1,50 @@
+aluno
+aluno
+sudo su
+aluno
+vim /etc/netplan/50-icloud
+dhcp: true
+#address
+wq!
+apt update
+apt install samba -y
+cd /etc/samba
+vim smb.conf
+[teste]
+	comment = comp. de teste
+	path = /home/testedir
+	valid users = junior
+	writeable = yes
+:wq!
+cd /home
+mkdir testedir
+cd testedir
+vim aviso.txt
+esse é um arquivo de compartilhamento
+:wq!
+groupadd teste
+useradd junior
+smbpasswd -a junior
+123
+123
+gpasswd -a junior teste
+cd ..
+chmod 777 testedir
+
+install apache2 -y
+cd /var/www/html
+cp index.html index.html.bkp
+vim -l index.html
+delete linha 228-234
+<h1>em construção</h1>
+mv index.html index.html.bkp2
+vim -l index.html 
+<html>
+<head>
+<title>prof</title>
+<body>
+ <marquee><h1> FATEC Osasco!</h1></marquee>
+ </body>
+ 
+ </html>
+ 
